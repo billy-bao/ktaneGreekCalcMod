@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- 由 Microsoft Visio, SVG Export 生成 绘图1.svg Component -->
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events"
+		width="9.05512in" height="9.05512in" viewBox="0 0 651.969 651.969" xml:space="preserve" color-interpolation-filters="sRGB"
+		class="st7">
+	<style type="text/css">
+	<![CDATA[
+		.st1 {fill:none;stroke:#000000;stroke-linecap:butt;stroke-width:5}
+		.st2 {fill:#ffffff;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-width:4.5}
+		.st3 {fill:none;stroke:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.75}
+		.st4 {fill:#000000;font-family:Arial;font-size:4.99999em}
+		.st5 {fill:#000000;font-family:Arial;font-size:4.00001em}
+		.st6 {fill:#ffffff;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-width:4}
+		.st7 {fill:none;fill-rule:evenodd;font-size:12px;overflow:visible;stroke-linecap:square;stroke-miterlimit:3}
+	]]>
+	</style>
+
+	<g>
+		<title>Component</title>
+		<g id="shape2-1" transform="translate(16.7244,-18)">
+			<title>工作表.2</title>
+			<path d="M0 39.97 L612 39.97 L612 651.97 L0 651.97 L0 39.97 Z" class="st1"/>
+		</g>
+		<g id="shape3-3" transform="translate(196.724,-385.837)">
+			<title>流程</title>
+			<rect x="0" y="556.826" width="121.5" height="95.1429" class="st2"/>
+		</g>
+		<g id="shape4-5" transform="translate(129.224,-501.223)">
+			<title>工作表.4</title>
+			<desc>y= f(x)</desc>
+			<rect x="0" y="545.692" width="247.5" height="106.277" class="st3"/>
+			<text x="39.58" y="616.83" class="st4">y= f(x)</text>		</g>
+		<g id="shape5-8" transform="translate(39.2244,-379.764)">
+			<title>工作表.5</title>
+			<desc>x:</desc>
+			<rect x="0" y="550.753" width="72" height="101.216" class="st3"/>
+			<text x="12.67" y="619.36" class="st4">x:</text>		</g>
+		<g id="shape6-11" transform="translate(39.2244,-283.609)">
+			<title>工作表.6</title>
+			<desc>y:</desc>
+			<rect x="0" y="550.753" width="72" height="101.216" class="st3"/>
+			<text x="12.67" y="619.36" class="st4">y:</text>		</g>
+		<g id="shape7-14" transform="translate(129.224,-274.5)">
+			<title>流程.7</title>
+			<rect x="0" y="556.826" width="261" height="95.1429" class="st2"/>
+		</g>
+		<g id="shape8-16" transform="translate(129.224,-385.837)">
+			<title>流程.8</title>
+			<desc>&#60;</desc>
+			<rect x="0" y="556.826" width="49.5" height="95.1429" class="st2"/>
+			<text x="7.23" y="622.4" class="st4">&#60;</text>		</g>
+		<g id="shape9-19" transform="translate(340.724,-385.837)">
+			<title>流程.9</title>
+			<desc>&#62;</desc>
+			<rect x="0" y="556.826" width="49.5" height="95.1429" class="st2"/>
+			<text x="7.23" y="622.4" class="st4">&#62;</text>		</g>
+		<g id="shape10-22" transform="translate(383.711,-526.946)">
+			<title>页面内引用</title>
+			<path d="M0 627.08 A24.8855 24.8855 0 0 1 49.77 627.08 A24.8855 24.8855 0 1 1 -0 627.08 Z" class="st2"/>
+		</g>
+		<g id="shape11-24" transform="translate(214.724,-410.129)">
+			<title>工作表.11</title>
+			<desc>##</desc>
+			<rect x="0" y="606.421" width="90" height="45.5471" class="st3"/>
+			<text x="11.63" y="647.2" class="st4">##</text>		</g>
+		<g id="shape12-27" transform="translate(151.724,-288.67)">
+			<title>工作表.12</title>
+			<desc>####</desc>
+			<rect x="0" y="586.178" width="216" height="65.7903" class="st3"/>
+			<text x="41.26" y="637.07" class="st4">####</text>		</g>
+		<g id="shape13-30" transform="translate(394.724,-400.008)">
+			<title>工作表.13</title>
+			<desc>####</desc>
+			<rect x="0" y="586.178" width="216" height="65.7903" class="st3"/>
+			<text x="41.26" y="637.07" class="st4">####</text>		</g>
+		<g id="shape14-33" transform="translate(394.724,-296.261)">
+			<title>工作表.14</title>
+			<desc>####</desc>
+			<rect x="0" y="586.178" width="216" height="65.7903" class="st3"/>
+			<text x="41.26" y="637.07" class="st4">####</text>		</g>
+		<g id="shape17-36" transform="translate(61.7244,-176.386)">
+			<title>正方形</title>
+			<desc>0</desc>
+			<rect x="0" y="588.969" width="63" height="63" class="st2"/>
+			<text x="14.82" y="638.47" class="st4">0</text>		</g>
+		<g id="shape18-39" transform="translate(214.724,-175.5)">
+			<title>正方形.18</title>
+			<desc>2</desc>
+			<rect x="0" y="588.969" width="63" height="63" class="st2"/>
+			<text x="14.82" y="638.47" class="st4">2</text>		</g>
+		<g id="shape19-42" transform="translate(138.224,-175.5)">
+			<title>正方形.19</title>
+			<desc>1</desc>
+			<rect x="0" y="588.969" width="63" height="63" class="st2"/>
+			<text x="14.82" y="638.47" class="st4">1</text>		</g>
+		<g id="shape20-45" transform="translate(291.224,-175.5)">
+			<title>正方形.20</title>
+			<desc>3</desc>
+			<rect x="0" y="588.969" width="63" height="63" class="st2"/>
+			<text x="14.82" y="638.47" class="st4">3</text>		</g>
+		<g id="shape21-48" transform="translate(372.224,-175.5)">
+			<title>正方形.21</title>
+			<desc>4</desc>
+			<rect x="0" y="588.969" width="63" height="63" class="st2"/>
+			<text x="14.82" y="638.47" class="st4">4</text>		</g>
+		<g id="shape23-51" transform="translate(457.724,-175.5)">
+			<title>矩形</title>
+			<desc>NEG</desc>
+			<rect x="0" y="588.969" width="113.386" height="63" class="st2"/>
+			<text x="4.69" y="634.87" class="st5">NEG</text>		</g>
+		<g id="shape24-54" transform="translate(61.7244,-90.8858)">
+			<title>正方形.24</title>
+			<desc>5</desc>
+			<rect x="0" y="588.969" width="63" height="63" class="st2"/>
+			<text x="14.82" y="638.47" class="st4">5</text>		</g>
+		<g id="shape25-57" transform="translate(214.724,-90)">
+			<title>正方形.25</title>
+			<desc>7</desc>
+			<rect x="0" y="588.969" width="63" height="63" class="st2"/>
+			<text x="14.82" y="638.47" class="st4">7</text>		</g>
+		<g id="shape26-60" transform="translate(138.224,-90)">
+			<title>正方形.26</title>
+			<desc>6</desc>
+			<rect x="0" y="588.969" width="63" height="63" class="st2"/>
+			<text x="14.82" y="638.47" class="st4">6</text>		</g>
+		<g id="shape27-63" transform="translate(291.224,-90)">
+			<title>正方形.27</title>
+			<desc>8</desc>
+			<rect x="0" y="588.969" width="63" height="63" class="st2"/>
+			<text x="14.82" y="638.47" class="st4">8</text>		</g>
+		<g id="shape28-66" transform="translate(372.224,-90)">
+			<title>正方形.28</title>
+			<desc>9</desc>
+			<rect x="0" y="588.969" width="63" height="63" class="st2"/>
+			<text x="14.82" y="638.47" class="st4">9</text>		</g>
+		<g id="shape29-69" transform="translate(457.724,-90)">
+			<title>矩形.29</title>
+			<desc>CHK</desc>
+			<rect x="0" y="588.969" width="113.386" height="63" class="st2"/>
+			<text x="6.02" y="634.87" class="st5">CHK</text>		</g>
+		<g id="shape31-72" transform="translate(511.724,-529.313)">
+			<title>圆形</title>
+			<path d="M0 622.72 A29.25 29.25 0 0 1 58.5 622.72 A29.25 29.25 0 1 1 0 622.72 Z" class="st6"/>
+		</g>
+	</g>
+</svg>
