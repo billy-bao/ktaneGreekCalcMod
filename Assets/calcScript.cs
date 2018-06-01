@@ -182,7 +182,7 @@ public class calcScript : MonoBehaviour {
         for (int i = X_LOW_VALUE_RANGE_MIN; i <= X_LOW_VALUE_RANGE_MAX; i++) lowVals.Add(i);
 
         int lowDataPointCnt = Random.Range(X_LOW_COUNT_RANGE_MIN, X_LOW_COUNT_RANGE_MAX + 1);
-        Debug.LogFormat("[Greek Calculus #{0}] Module will have {1} low data points.", _moduleId, lowDataPointCnt);
+        //Debug.LogFormat("[Greek Calculus #{0}] Module will have {1} low data points.", _moduleId, lowDataPointCnt);
         for(int i = 0; i < lowDataPointCnt; i++)
         {
             int rand = Random.Range(0, lowVals.Count);
@@ -190,12 +190,12 @@ public class calcScript : MonoBehaviour {
             int newY = Random.Range(Y_VALUE_RANGE_MIN, Y_VALUE_RANGE_MAX + 1);
             tempVals.Add(newX, newY);
             lowVals.RemoveAt(rand);
-            Debug.LogFormat("[Greek Calculus #{0}] Low data point generated: ({1}, {2}).", _moduleId, newX, newY);
+            //Debug.LogFormat("[Greek Calculus #{0}] Low data point generated: ({1}, {2}).", _moduleId, newX, newY);
         }
 
         //randomize high-X data points
         int highDataPointCnt = Random.Range(X_HIGH_COUNT_RANGE_MIN, X_HIGH_COUNT_RANGE_MAX + 1);
-        Debug.LogFormat("[Greek Calculus #{0}] Module will have {1} high data points.", _moduleId, highDataPointCnt);
+        //Debug.LogFormat("[Greek Calculus #{0}] Module will have {1} high data points.", _moduleId, highDataPointCnt);
         for (int i = 0; i < highDataPointCnt; i++)
         {
             while (true)
@@ -207,7 +207,7 @@ public class calcScript : MonoBehaviour {
                     int newX = rand;
                     int newY = Random.Range(Y_VALUE_RANGE_MIN, Y_VALUE_RANGE_MAX + 1);
                     tempVals.Add(newX, newY);
-                    Debug.LogFormat("[Greek Calculus #{0}] High data point generated: ({1}, {2}).", _moduleId, newX, newY);
+                    //Debug.LogFormat("[Greek Calculus #{0}] High data point generated: ({1}, {2}).", _moduleId, newX, newY);
                     break;
                 }
             }

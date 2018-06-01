@@ -1248,7 +1248,7 @@ Transform:
   m_GameObject: {fileID: 1886203113199954}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.0242, y: 0.01, z: 0.0659}
-  m_LocalScale: {x: 0.02, y: 0.02, z: 0.02}
+  m_LocalScale: {x: 0.018, y: 0.018, z: 0.018}
   m_Children: []
   m_Father: {fileID: 4899526786038806}
   m_RootOrder: 22
@@ -4002,7 +4002,6 @@ MonoBehaviour:
   audio: {fileID: 114605691378625022}
   module: {fileID: 114764385454597636}
   info: {fileID: 114379931396452448}
-  settings: {fileID: 0}
   numButtons:
   - {fileID: 114799180695097010}
   - {fileID: 114439236348882600}
@@ -4864,7 +4863,7 @@ MonoBehaviour:
   m_Script: {fileID: -119419473, guid: 45b809be76fd7a3468b6f517bced6f28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ModuleType: greekCalc
+  ModuleType: greekCalculus
   ModuleDisplayName: Greek Calculus
   RequiresTimerVisibility: 0
 --- !u!114 &114782499265553814

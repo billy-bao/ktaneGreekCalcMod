@@ -11,7 +11,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 615501dbe4f3fe94fbf4b564abb10237, type: 3}
   m_Name: ModConfig
   m_EditorClassIdentifier: 
-  id: greekCalc
+  id: greekCalculus
   title: Greek Calculus
   description: 'Do some approximations of calculus on a function using a list of data
     points encoded with Greek letters.
