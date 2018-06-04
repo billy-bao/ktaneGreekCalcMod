@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text.RegularExpressions;
 using UnityEngine;
 using Newtonsoft.Json;
 using KMHelper;
@@ -35,6 +36,10 @@ public class calcScript : MonoBehaviour {
     public static readonly char[] greekAlphabet = {'α', 'β', 'γ', 'δ', 'ε', 'ζ', 'η', 'θ', 'ι', 'κ', 'λ', 'μ', 'ν', 'ξ', 'ο', 'π', 'ρ', 'σ', 'τ', 'υ', 'φ', 'χ', 'ψ', 'ω'};
     public static int[] greekVals = new int[24];
     public static readonly Color[] otherColors = { Color.magenta, new Color(0.8f, 0.5f, 0f), new Color(0.73f, 0.16f, 0.96f), new Color(0.584f, 0.271f, 0.208f), Color.white};
+    public string TwitchHelpMessage = "Cycle through all data points with !{0} cycle\n" +
+                                      "Cycle through the data points between two x values using !{0} cycle <x val 1> <x val 2>\n" +
+                                      "Submit the correct response with !{0} submit <number>";
+
     private int minX, minY, maxX, maxY;
     private DataValue parA, parB;
     private DataValue[] XVals, YVals;
@@ -389,7 +394,7 @@ public class calcScript : MonoBehaviour {
         if (!_lightsOn || _isSolved) return;
 
         negCurInput = !negCurInput;
-        Debug.LogFormat("[Greek Calculus #{0}] Negate button pushed! Current user answer: {1}.", _moduleId, (negCurInput ? -curInput : curInput));
+        Debug.LogFormat("[Greek Calculus #{0}] Negate button pushed! Current user answer: {1}{2}.", _moduleId, negCurInput ? "-" : "",curInput);
     }
 
     void submitBtnPress()
@@ -651,4 +656,131 @@ public class calcScript : MonoBehaviour {
     }
 
     #endregion
+
+    IEnumerator ProcessTwitchCommand(string command)
+    {
+        command = command.ToLowerInvariant().Trim();
+        if(command.Equals("cycle"))
+        {
+            for (int i = 0; i < XVals.Length; i++)
+            {
+                yield return right;
+                yield return new WaitForSeconds(0.1f);
+                yield return right;
+                yield return new WaitForSeconds(2.0f);
+            }
+            yield break;
+        }
+        else if(Regex.IsMatch(command, @"^cycle -?\d+ -?\d+$"))
+        {
+            //parse numbers
+            string numStr = command.Substring(6).Trim();
+            string[] nums = numStr.Split(new char[1] { ' ' });
+            int num1 = int.MinValue, num2 = int.MinValue;
+            if(!int.TryParse(nums[0], out num1) || !int.TryParse(nums[1], out num2))
+            {
+                yield return "sendtochaterror Invalid integer format!";
+                yield break;
+            }
+            
+            //if first number greater then swap them
+            if(num1 > num2)
+            {
+                int tmp = num1;
+                num1 = num2;
+                num2 = tmp;
+            }
+
+            //find value indices based on value
+            int index1 = -1, index2 = -1;
+            for(int i = 0; i < XVals.Length; i++)
+            {
+                if(num1 == XVals[i].val)
+                {
+                    index1 = i;
+                    break;
+                }
+            }
+            if(index1 == -1)
+            {
+                yield return "sendtochaterror " + num1 + " is not a valid given X value!";
+                yield break;
+            }
+            for (int i = index1; i < XVals.Length; i++)
+            {
+                if (num2 == XVals[i].val)
+                {
+                    index2 = i;
+                    break;
+                }
+            }
+            if (index2 == -1)
+            {
+                yield return "sendtochaterror " + num2 + " is not a valid given X value!";
+                yield break;
+            }
+
+            
+            while(curDataPntIndex != index1)
+            {
+                yield return right;
+                yield return new WaitForSeconds(0.1f);
+                yield return right;
+                yield return new WaitForSeconds(0.1f);
+            }
+            yield return new WaitForSeconds(1.9f);
+            while(curDataPntIndex != index2)
+            {
+                yield return right;
+                yield return new WaitForSeconds(0.1f);
+                yield return right;
+                yield return new WaitForSeconds(2.0f);
+            }
+            yield break;
+        }
+        else if(Regex.IsMatch(command, @"^submit -?\d+$"))
+        {
+            //parse number
+            string numStr = command.Substring(7).Trim();
+            int subNum = int.MinValue;
+            if(!int.TryParse(numStr, out subNum))
+            {
+                yield return "sendtochaterror Invalid integer format!";
+                yield break;
+            }
+            yield return new WaitForSeconds(0.1f);
+
+            //submit negative sign
+            if (subNum < 0)
+            {
+                subNum = -subNum;
+                yield return neg;
+                yield return new WaitForSeconds(0.1f);
+                yield return neg;
+                yield return new WaitForSeconds(0.1f);
+            }
+
+            //submit digits
+            int tmpNum = subNum;
+            for(int pow = 9; pow >= 0; pow--)
+            {
+                int mult = (int)Mathf.Pow(10, pow);
+                if (subNum < mult) continue;
+                int dig = tmpNum / mult;
+                yield return numButtons[dig];
+                yield return new WaitForSeconds(0.1f);
+                yield return numButtons[dig];
+                yield return new WaitForSeconds(0.1f);
+                tmpNum %= mult;
+            }
+
+            //hit submit button
+            yield return chk;
+            yield return new WaitForSeconds(0.1f);
+            yield return chk;
+            yield break;
+        }
+        
+        yield break;
+    }
 }
