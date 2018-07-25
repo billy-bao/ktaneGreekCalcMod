@@ -36,9 +36,10 @@ public class calcScript : MonoBehaviour {
     public static readonly char[] greekAlphabet = {'α', 'β', 'γ', 'δ', 'ε', 'ζ', 'η', 'θ', 'ι', 'κ', 'λ', 'μ', 'ν', 'ξ', 'ο', 'π', 'ρ', 'σ', 'τ', 'υ', 'φ', 'χ', 'ψ', 'ω'};
     public static int[] greekVals = new int[24];
     public static readonly Color[] otherColors = { Color.magenta, new Color(0.8f, 0.5f, 0f), new Color(0.73f, 0.16f, 0.96f), new Color(0.584f, 0.271f, 0.208f), Color.white};
-    public string TwitchHelpMessage = "Cycle through all data points with !{0} cycle\n" +
-                                      "Cycle through the data points between two x values using !{0} cycle <x val 1> <x val 2>\n" +
-                                      "Submit the correct response with !{0} submit <number>";
+	public string TwitchHelpMessage = "Press the left and right buttons with !{0} left or !{0} right.\n" +
+    								  "Cycle through all data points QUICKLY with !{0} cycle.\n" +
+                                      "Cycle through the data points SLOWLY between two x values using !{0} cycle <x val 1> <x val 2>.\n" +
+                                      "Submit the correct response with !{0} submit <number>.";
 
     private int minX, minY, maxX, maxY;
     private DataValue parA, parB;
@@ -660,14 +661,28 @@ public class calcScript : MonoBehaviour {
     IEnumerator ProcessTwitchCommand(string command)
     {
         command = command.ToLowerInvariant().Trim();
-        if(command.Equals("cycle"))
+		if (command.Equals ("left"))
+		{
+			yield return left;
+			yield return new WaitForSeconds(0.1f);
+			yield return left;
+			yield return new WaitForSeconds(0.1f);
+		}
+		if (command.Equals ("right"))
+		{
+			yield return right;
+			yield return new WaitForSeconds(0.1f);
+			yield return right;
+			yield return new WaitForSeconds(0.1f);
+		}
+        else if(command.Equals("cycle"))
         {
             for (int i = 0; i < XVals.Length; i++)
             {
                 yield return right;
                 yield return new WaitForSeconds(0.1f);
                 yield return right;
-                yield return new WaitForSeconds(2.0f);
+                yield return new WaitForSeconds(1.0f);
             }
             yield break;
         }

@@ -20,7 +20,7 @@ MonoBehaviour:
     Note: No actual calculus knowledge needed to solve this module!
 
 
-    moduleId: greekCalc'
+    moduleId: greekCalculus'
   version: 1.0
   outputFolder: build
   previewImage: {fileID: 2800000, guid: 6e90d9bfd347cc745a951cdae9c55e02, type: 3}
