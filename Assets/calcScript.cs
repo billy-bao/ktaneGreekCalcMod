@@ -45,6 +45,7 @@ public class calcScript : MonoBehaviour {
     private DataValue parA, parB;
     private DataValue[] XVals, YVals;
     private int opCode;
+	private int correctAnswer;
 
     private int curDataPntIndex = 0, curInput = 0;
     private bool negCurInput = false;
@@ -146,6 +147,7 @@ public class calcScript : MonoBehaviour {
         initVals();
         initPuzzleSymbolic();
         initDisplays();
+		correctAnswer = getAnswer ();
         _lightsOn = true;
         setTextColors(false);
         module.GetComponent<KMGameInfo>().OnLightsChange += OnLightChange;
@@ -405,7 +407,6 @@ public class calcScript : MonoBehaviour {
         if (!_lightsOn || _isSolved) return;
 
         Debug.LogFormat("[Greek Calculus #{0}] Submit button pushed! Checking answer...", _moduleId);
-        int correctAnswer = getAnswer();
         int playerAnswer = (negCurInput ? -curInput : curInput);
         Debug.LogFormat("[Greek Calculus #{0}] Correct answer is {1}, player answer is {2}.", _moduleId, correctAnswer, playerAnswer);
         if (correctAnswer == playerAnswer)
