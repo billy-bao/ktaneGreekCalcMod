@@ -664,20 +664,23 @@ public class calcScript : MonoBehaviour {
         command = command.ToLowerInvariant().Trim();
 		if (command.Equals ("left"))
 		{
+            yield return null;
 			yield return left;
 			yield return new WaitForSeconds(0.1f);
 			yield return left;
 			yield return new WaitForSeconds(0.1f);
 		}
-		if (command.Equals ("right"))
+		else if (command.Equals ("right"))
 		{
-			yield return right;
+            yield return null;
+            yield return right;
 			yield return new WaitForSeconds(0.1f);
 			yield return right;
 			yield return new WaitForSeconds(0.1f);
 		}
         else if(command.Equals("cycle"))
         {
+            yield return null;
             for (int i = 0; i < XVals.Length; i++)
             {
                 yield return right;
@@ -736,8 +739,8 @@ public class calcScript : MonoBehaviour {
                 yield break;
             }
 
-            
-            while(curDataPntIndex != index1)
+            yield return null;
+            while (curDataPntIndex != index1)
             {
                 yield return right;
                 yield return new WaitForSeconds(0.1f);
@@ -765,6 +768,7 @@ public class calcScript : MonoBehaviour {
                 yield break;
             }
             yield return new WaitForSeconds(0.1f);
+            yield return null;
 
             //submit negative sign
             if (subNum < 0)
